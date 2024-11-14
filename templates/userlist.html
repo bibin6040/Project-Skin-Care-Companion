@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}    
+{% block main %}
+<style>
+    .profile-card {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    .profile-card h2 {
+        margin-top: 0;
+    }
+</style>
+    
+
+    <div class="preloader"></div>
+
+    <!-- Header navbar start -->
+    <div class="header-topbar style-2">
+        <div class="container padding-none">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 welcome-top">
+                    <ul class="list-inline top-icon">
+                        
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <ul class="list-inline text-right icon-style-1">
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "navbar.html" %}
+    
+    <!-- Header navbar end -->
+
+
+    <section class="inner-bg over-layer-black" style="background-image: url('{% static "img/bg/profile.jpg" %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mini-title inner-style-2">
+                        <h3 >Registerd Users</h3>
+                        <p><a href="{% url 'index' %}">Home</a> <span class="fa fa-angle-right"></span> <a href="#"><b>Registerd Users</b></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% comment %} {% for i in userprofiles  %}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{% endfor %} {% endcomment %}
+    <!-- Team start -->
+    <section class="team-area">
+        <div class="container">
+            <div class="section-content">
+                <h1 style="text-align: center;">All User Profiles</h1>
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead style="background-color: #f2f2f2;">
+            <tr style="background-color: #f2f2f2;">
+                <th style="border: 1px solid #ddd; padding: 8px;  background-color: #4CAF50;color: white;">Full Name</th>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50;color: white;">email</th>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50;color: white;">Date of Birth</th>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50;color: white;">password</th>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50;color: white;">gender</th>
+                <th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50;color: white;">created_at</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for profile in profiles %}
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ profile.FullName }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ profile.email }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ profile.DOB }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ profile.password }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ profile.gender }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ profile.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+            </div>
+        </div>
+    </section>
+    <!-- Team end -->
+
+   
+
+    <section class="footer-copy-right bg-f9">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p><a target="_blank" href=" ">HAVE A NICE DAY</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Style End -->
+
+  
+    {% endblock  %}

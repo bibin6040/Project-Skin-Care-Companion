@@ -1,0 +1,459 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+<div class="preloader"></div>
+
+    <!-- Header navbar start -->
+    <div class="header-topbar style-2">
+        <div class="container padding-none">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 welcome-top">
+                    <ul class="list-inline top-icon">
+                        
+                        <li><i class="fa fa-clock-o"></i> 24 HR AT YOUR SERVICE</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <ul class="list-inline text-right icon-style-1">
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% include "navbar.html" %}
+    <!-- Header navbar end -->
+
+    <!-- Start  bootstrap-touch-slider Slider -->
+    <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+            <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper For Slides -->
+        <div class="carousel-inner" role="listbox">
+            <!-- Third Slide -->
+            <div class="item active">
+                <!-- Slide Background -->
+                <img src="{% static 'img/bg/3.jpg' %}" alt="Slider Images"  class="slide-image"/>
+                <div class="bs-slider-overlay"></div>
+
+                <div class="slide-text slide_style_left">
+                    <h1 data-animation="animated fadeInRight">Welcome To <span class="color-defult">Skin Care </span>Companion</h1>
+                    <p data-animation="animated fadeInLeft">Discover a healthier you with Skin Care Companion,<br> your trusted app for identifying and understanding skin conditions. <br> Our app combines advanced AI technology with expert medical insights to help you take control of your skin health with confidence.</p>
+                    
+                    
+                </div>
+            </div>
+            <!-- End of Slide -->
+
+            <!-- Second Slide -->
+            <div class="item">            
+                <!-- Slide Background -->
+                <img src="{% static 'img/bg/2.jpg'%}" alt="Slider Images" class="slide-image"/>
+                <div class="bs-slider-overlay"></div>
+                <!-- Slide Text Layer -->
+                <div class="slide-text slide_style_center">
+                    <h1 data-animation="animated bounceInDown"> Treat<span class="color-defult"> Skin</span> disease.</h1>
+                    <p data-animation="animated lightSpeedIn">Skin diseases encompass a wide range of conditions that affect the skin, <br>each requiring specific treatments.</p>
+                    
+                </div>
+            </div>
+            <!-- End of Slide -->
+            
+            <!-- Third Slide -->
+            <div class="item">            
+                <!-- Slide Background -->
+                <img src="{%  static 'img/bg/1.jpg'%}" alt="Slider Images"  class="slide-image"/>
+                <div class="bs-slider-overlay"></div>
+                <!-- Slide Text Layer -->
+                <div class="slide-text slide_style_right">
+                    <h1 data-animation="animated fadeInLeft">Follow<span class="color-defult">Medical Advice</span></h1>
+                    <p data-animation="animated fadeInRight">Always follow the treatment plan prescribed by your dermatologist. </p>
+                    
+                </div>
+            </div>
+            <!-- End of Slide -->
+        </div><!-- End of Wrapper For Slides -->
+
+        <!-- Left Control -->
+        <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <!-- Right Control -->
+        <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div> <!-- End  bootstrap-touch-slider Slider -->
+
+   
+
+    <!-- welcome start -->
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2>Why chose Skin Care Companion</h2>
+                        <h3 class="color-defult">Empower Your Skin, Empower Yourself</h3>
+                        <p class="lead">Every step you take towards healthier skin is a step towards a more confident you.</b> Embrace the journey with the best tools and expert advice. </p>
+                        <p> <b>Your skin is a reflection of your inner health. With dedication and the right guidance, achieve the flawless skin you deserve.</b></p>
+                        <div class="row margin-top-20">
+                            <div class="col-md-6">
+                                <img class="margin-top-10" src="{%  static 'img/services/s1.jpg'%}" alt="">
+                            </div>
+                            
+                        </div>
+                        
+
+                    </div>
+                    <div class="col-md-5">
+                        <div>
+                           <img alt="" src="{%  static 'img/services/w1.jpg'%}"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- welcome end -->
+
+    <!-- service start -->
+    <section class="service-area bg-f8 animatedParent animateOnce">
+        <div class="container">
+            <div class="section-title">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <h2>Our <span class="color-defult">Services</span></h2>
+                        <div class="line-border-center bg-defult"></div>
+                        <p>Find The Skin Disease At The  best Way.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="service-item text-center style-3">
+                            <span class="flaticon-heart-1"></span>
+                            <h4><a href="#">Disease Prediction</a></h4>
+                            <div class="border-center"></div>
+                            <p>  Provide direct support to an individual, family or community without paying  for service.</p>
+                            <button type="submit" class="btn btn-theme margin-top-20" data-text="Send Message">Read More</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="service-item text-center style-3">
+                            <span class="flaticon-broken-bone"></span>
+                            <h4><a href="#">Skin Disease Knowledge</a></h4>
+                            <div class="border-center"></div>
+                            <p>  Provide direct support to an individual, family or community without paying  for service</p>
+                            <button type="submit" class="btn btn-theme margin-top-20" data-text="Send Message">Read More</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="service-item text-center style-3">
+                            <span class="flaticon-stomach"></span>
+                            <h4><a href="#">Basic Medicines</a></h4>
+                            <div class="border-center"></div>
+                            <p>  Provide direct support to an individual, family or community without paying  for service</p>
+                            <button type="submit" class="btn btn-theme margin-top-20" data-text="Send Message">Read More</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="service-item text-center style-3">
+                            <span class="flaticon-brain-2"></span>
+                            <h4><a href="#">Medicine Usage</a></h4>
+                            <div class="border-center"></div>
+                            <p>  Provide direct support to an individual, family or community without paying  for service</p>
+                            <button type="submit" class="btn btn-theme margin-top-20" data-text="Send Message">Read More</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="service-item text-center style-3">
+                            <span class="flaticon-spine-bone"></span>
+                            <h4><a href="#">Skin Care</a></h4>
+                            <div class="border-center"></div>
+                            <p>  Provide direct support to an individual, family or community without paying  for service</p>
+                            <button type="submit" class="btn btn-theme margin-top-20" data-text="Send Message">Read More</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="service-item text-center style-3">
+                            <span class="flaticon-virus"></span>
+                            <h4><a href="#">Life Time Support</a></h4>
+                            <div class="border-center"></div>
+                            <p>  Provide direct support to an individual, family or community without paying  for service</p>
+                            <button type="submit" class="btn btn-theme margin-top-20" data-text="Send Message">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service end -->
+
+     <!-- portfolio start -->
+    <section class="gallery-area">
+        <div class="container">
+            <div class="section-title">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <h2> Common Skin<span class="color-defult">  Diseases </span></h2>
+                        <div class="line-border-center bg-defult"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="row clearfix">
+                    
+
+                    <div class="gallery col-3 gutter">
+                        <div class="gallery-item gp-two">
+                            <div class="thumb">
+                                <img src="{% static 'img/portfolio/ss1.jpg'%}" alt="">
+                                <div class="gallery-hover">
+                                    <div class="gallery-info">
+                                        <div class="gallery-btn">
+                                            <a href="{% static 'img/portfolio/ss1.jpg'%}" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view"> <i class="pe-7s-graph2"></i>  </a>
+                                        </div>
+                                        <h4><a href="{% static 'img/portfolio/ss1.jpg'%}" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view">Primary Cutaneous Amyloidosis</a></h4>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item gp-three">
+                            <div class="thumb">
+                                <img src="{% static 'img/portfolio/ss2.jpg'%}" alt="">
+                                <div class="gallery-hover">
+                                    <div class="gallery-info">
+                                        <div class="gallery-btn">
+                                            <a href="{% static 'img/portfolio/ss2.jpg'%}" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view"> <i class="pe-7s-graph2"></i>  </a>
+                                        </div>
+                                        <h4><a href="{% static 'img/portfolio/ss2.jpg'%}" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view">Keratosis Pilaris</a></h4>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item gp-four">
+                            <div class="thumb">
+                                <img src="{% static 'img/portfolio/ss3.jpg '%}" alt="">
+                                <div class="gallery-hover">
+                                    <div class="gallery-info">
+                                        <div class="gallery-btn">
+                                            <a href="{% static 'img/portfolio/ss3.jpg'%}" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view"> <i class="pe-7s-graph2"></i>  </a>
+                                        </div>
+                                        <h4><a href="{% static 'img/portfolio/ss3.jpg'%}" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view">Hemangioma</a></h4>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- portfolio end -->
+
+   
+
+   
+   
+    <!-- Counter start -->
+    <section class="funfact-field over-layer-default" style="background-image: url('{% static "img/bg/6.jpg" %}')">
+        <div class="container-fluid">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h2> Successful  Outcomes </h2>
+                <div class="line-border-center bg-defult"></div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="counter-col text-center">
+                        <i class="flaticon-heart"></i>
+                        <div class="count">
+                            <div class="start-count">250</div>
+                            <h4>Morgellons Diseases</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="counter-col text-center">
+                        <i class="flaticon-human-lungs"></i>
+                        <div class="count">
+                            <div class="start-count">979</div>
+                            <h4>Erythropoietic Protoporphyria</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="counter-col text-center">
+                        <i class="flaticon-kidney"></i>
+                        <div class="count">
+                            <div class="start-count">5264</div>
+                            <h4>Leprosy</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="counter-col text-center">
+                        <i class="flaticon-first-aid-kit"></i>
+                        <div class="count">
+                            <div class="start-count border-none">1000</div>
+                            <h4>Eruptive Xanthomas</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counter end -->
+
+    <!-- Testimonial start -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="section-title">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <h2>Our <span class="color-defult"> Clients</span> Say</h2>
+                        <div class="line-border-center bg-defult"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="testimonial-carousel-one">
+                            <div class="item">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-author">
+                                        <div class="author-img">
+                                            <img class="img-responsive" src="{% static 'img/testimonial/1.png'%}" alt="" />
+                                        </div>
+                                        <h4>John Daniel</h4>
+                                        
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        </ul>
+                                    </div>
+                                    <p>I want to extend my heartfelt thanks to the team behind this incredible app. Your accurate predictions and effective treatments have truly transformed my skin. I used to struggle with persistent skin issues, but now, thanks to your expertise and dedication, my skin is healthier than ever.</p> 
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-author">
+                                        <div class="author-img">
+                                            <img class="img-responsive" src="{% static 'img/testimonial/2.png'%}" alt="" />
+                                        </div>
+                                        <h4>Henry Thomas</h4>
+                                        
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        </ul>
+                                    </div>
+                                    <p>I am incredibly grateful for the amazing results I have experienced using this app. The accurate predictions and personalized treatment plans have worked wonders on my skin. I can't thank you enough for your commitment to helping people like me.</p> 
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-author">
+                                        <div class="author-img">
+                                            <img class="img-responsive" src="{% static 'img/testimonial/3.png'%}" alt="" />
+                                        </div>
+                                        <h4>James Alexander</h4>
+                                        
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        </ul>
+                                    </div>
+                                    <p>Thank you for creating such an outstanding app. It has not only predicted my skin issues accurately but also provided treatments that have cured my condition effectively. Your app's comprehensive approach and user-friendly interface have made managing my skin health so much easier.</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial end -->
+    
+   
+
+    <!-- Footer Style start -->
+    <footer class="bg-faded">
+        <div class="container">
+            <div class="section-content">
+                <div class="row margin-top-30">
+                    <div class="col-md-3">
+                      <div class="footer-item footer-widget-one">
+                          <img alt="" src="{% static 'img/s1logo.png'%}" class="footer-logo">
+                          <p><b>Smart Solutions for Your Skin's Health Journey.</b></p>
+
+                          <ul class="address">
+                            <li><i class="pe-7s-call"></i>Phone:9495567823</li>
+                            <li><i class="pe-7s-mail"></i><a href="mailto:">Email: skincare.com</a></li>
+                          </ul>
+                          
+                          
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="footer-item">
+                        <div class="footer-title">
+                          <h4>Our Motive </h4>
+                          <div class="border-style-2"></div>
+                        </div>
+                        <p>The core motive of our skin disease prediction app is to empower you with early detection and personalized solutions for healthier skin.<br>
+                             By providing advanced predictive technology, we aim to give you the tools to identify potential skin issues before they escalate.<br> Our app offers tailored advice and solutions that address your unique skin needs, <br>
+                             ensuring that you can take proactive steps towards maintaining and achieving optimal skin health. <br>With our support, you can stay ahead of skin conditions and enjoy the confidence of a healthier, glowing complexion.</p>
+                      </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="footer-copy-right bg-f9">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p><a target="_blank" href=" ">HAVE A NICE DAY</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Style End -->
+
+  
+  {% endblock %}

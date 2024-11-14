@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}    
+{% block main %}
+    <div class="preloader"></div>
+
+    <!-- Header navbar start -->
+    <div class="header-topbar style-2">
+        <div class="container padding-none">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 welcome-top">
+                    <ul class="list-inline top-icon">
+                        <li><i class="fa fa-envelope"></i> 24 HR AT YOUR SERVICE</li>
+                        
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <ul class="list-inline text-right icon-style-1">
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "navbar.html" %}
+    
+    <!-- Header navbar end -->
+
+
+    <section class="inner-bg over-layer-black" style="background-image: url('{% static "img/bg/ad.jpg" %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mini-title inner-style-2">
+                        <h3>ADMIN DASHBOARD</h3>
+                        <p><a href="{% url 'index' %}">Home</a> <span class="fa fa-angle-right"></span> <a href="#">ADMIN DASHBOARD</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- depertment start -->
+    <section class="depertment-area">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="depertment-col">
+                            <div class="depertment-list">
+                                <a href="{% url 'user_profiles_list' %}"><i class="flaticon-heart"></i> USER'S PROFILE</a>
+                                <a href="{% url 'disease_view' %}"><i class="flaticon-broken-bone"></i> Disease View</a>
+                                <a href="{% url 'contact_list' %}"><i class="flaticon-broken-bone"></i> Message View</a>
+                                
+                               
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-md-8">
+                        
+                        <h3 class="margin-top-30 margin-bottom-20"> <span class="color-defult">Skin Care </span> Companion</h3>
+                        <p>In Skin care <span class="color-defult">Companion</span> admins should follow key guidelines for effective management and security. Ensure only authorized personnel access the admin panel by using robust authentication methods and defining clear user roles with specific permissions. Maintain data integrity by validating and sanitizing inputs, and protect sensitive information through encryption and strict access controls. Regularly update the system to patch security vulnerabilities and keep backups to safeguard against data loss. Monitor system activity to detect and respond to any unauthorized access or anomalies promptly..</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- depertment end -->
+
+    <!-- Counter start -->
+    <section class="funfact-field over-layer-default" style="background-image: url('{% static "img/bg/6.jpg" %}')">
+        <div class="container-fluid">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h2> Successful  Outcomes </h2>
+                <div class="line-border-center bg-defult"></div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="counter-col text-center">
+                        <i class="flaticon-heart"></i>
+                        <div class="count">
+                            <div class="start-count">250</div>
+                            <h4>Morgellons Diseases</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="counter-col text-center">
+                        <i class="flaticon-human-lungs"></i>
+                        <div class="count">
+                            <div class="start-count">979</div>
+                            <h4>Erythropoietic Protoporphyria</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="counter-col text-center">
+                        <i class="flaticon-kidney"></i>
+                        <div class="count">
+                            <div class="start-count">5264</div>
+                            <h4>Leprosy</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="counter-col text-center">
+                        <i class="flaticon-first-aid-kit"></i>
+                        <div class="count">
+                            <div class="start-count border-none">1000</div>
+                            <h4>Eruptive Xanthomas</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counter end -->
+
+    <!-- Team start -->
+    
+    <!-- Team end -->
+
+   <!-- divider start -->
+    
+    <!-- divider end -->
+
+    <!-- Footer Style start -->
+    
+
+    <section class="footer-copy-right bg-f9">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p><a target="_blank" href="#">HAVE A NICE DAY</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Style End -->
+
+
+  
+    {% endblock  %}

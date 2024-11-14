@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+
+
+    <div class="preloader"></div>
+
+    <!-- Header navbar start -->
+    <div class="header-topbar style-2">
+        <div class="container padding-none">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 welcome-top">
+                    <ul class="list-inline top-icon">
+                        
+                        <li><i class="fa fa-clock-o"></i> 24 HR AT YOUR SERVICE</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <ul class="list-inline text-right icon-style-1">
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "navbar.html" %}
+    <!-- Header navbar end -->
+
+
+    <section class="inner-bg over-layer-black" style="background-image: url('{% static "img/bg/bg4.jpg" %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mini-title inner-style-2">
+                        <h3>Terms And Conditions</h3>
+                        <p><a href="{% url 'index' %}">Home</a> <span class="fa fa-angle-right"></span> <a href="#">Terms And Conditions </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+   
+
+    <!-- Footer Style start -->
+    <footer class="bg-faded">
+        <div class="container">
+            <div class="section-content">
+                <div class="row margin-top-30">
+                   
+                    <div class="col-md-8">
+                      <div class="footer-item">
+                        <div class="footer-title">
+                          <h4>Terms And Conditions </h4>
+                          <div class="border-style-2"></div>
+                        </div>
+                        <div><p>Welcome to Skin Care Companion. By accessing or using our application, you agree to be bound by these Terms and Conditions. This application is designed to provide users with predictive analysis for skin conditions,<br> but it is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions you may have regarding a medical condition. <br>The predictions and information provided by this app are for informational purposes only and should not be relied upon as the sole basis for making health-related decisions.
+
+                            You are responsible for providing accurate and complete information to ensure the app functions correctly.<br> We collect and process your personal data in accordance with our Privacy Policy, which outlines how we handle and protect your information. By using the app, you consent to the collection and use of your data as described therein.<br> We take reasonable measures to safeguard your data, but we cannot guarantee absolute security.</p></div>
+                        
+                      </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="footer-copy-right bg-f9">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p><a target="_blank" href="# ">HAVE A NICE DAY</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Style End -->
+
+  
+ {% endblock  %}
+
+

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}    
+{% block main %}
+
+<section class="inner-bg over-layer-black" style="background-image: url('{% static "img/bg/profile.jpg" %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="text-align: center; margin-bottom: 20px; color: blue;">Disease View</h2>
+                <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                    {% if user_details %}
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">User ID</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Full Name</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Email</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Predicted Disease</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Remedies and Medicines</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Description</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Duration</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Itchiness</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Pain</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Discharge</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #4CAF50; color: white;">Created At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in user_details %}
+                                {% for prediction in user.predictions %}
+                                <tr style="{% if forloop.counter|divisibleby:2 %}background-color: #f2f2f2;{% endif %}" onmouseover="this.style.backgroundColor='#ddd';" onmouseout="this.style.backgroundColor='{% if forloop.counter|divisibleby:2 %}#f2f2f2{% else %}#fff{% endif %}';">
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ user.profile.id }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ user.profile.FullName }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ user.profile.email }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ prediction.predicted_disease }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ prediction.remedies_and_medicines }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ prediction.description }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ prediction.duration }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ prediction.itchiness }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ prediction.pain }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ prediction.discharge }}</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">{{ prediction.created_at }}</td>
+                                </tr>
+                                {% endfor %}
+                            {% empty %}
+                            <tr>
+                                <td colspan="11" style="border: 1px solid #ddd; padding: 12px; text-align: center;">No predictions available.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <p>No data found.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

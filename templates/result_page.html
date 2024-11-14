@@ -1,0 +1,117 @@
+{% load static %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: white;
+            width: 700px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border: 2px solid #2ecc71; /* Green border */
+            box-sizing: border-box;
+            position: relative;
+        }
+        .logo {
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2ecc71; /* Green heading */
+            text-decoration: underline; /* Underline the heading */
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .label {
+            font-size: 1.5em;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .content-box {
+            border: 1px solid #2ecc71; /* Green border for content boxes */
+            padding: 20px;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        strong {
+            color: #e74c3c;
+        }
+        .medicine-remedies {
+            margin-top: 20px;
+        }
+        .medicine-remedies .label {
+            color: #2c3e50;
+            font-size: 1.3em;
+        }
+        .medicine-remedies .content-box {
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+        a {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- Logo Image -->
+        <img src="{% static 'img/s1logo.png' %}" alt="Logo" class="logo">
+
+        <h1>Predicted Disease</h1>
+
+        <div class="section">
+            <div class="label">Disease Predicted:</div>
+            <div class="content-box">
+                <strong>{{ prediction }}</strong>
+            </div>
+        </div>
+
+        <div class="medicine-remedies">
+            <div class="label">Medicines & Remedies:</div>
+            <div class="content-box">
+                <strong>Medicines:</strong> {{ medicine }} <br><br>
+                <strong>Remedies:</strong> {{ remedies }}
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="{% url 'userdash' %}">Back to Dashboard</a>
+            <a href="{% url 'download_pdf' %}" style="margin-left: 20px;">Download Prediction Result</a>
+        </div>
+    </div>
+</body>
+</html>

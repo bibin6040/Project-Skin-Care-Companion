@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        /* Letterhead section */
+        .letterhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2ecc71;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+        .system-title {
+            text-align: center;
+            flex-grow: 1;
+            font-size: 2em;
+            margin: 0;
+            color: white;
+        }
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #2ecc71;
+            text-align: left;
+            font-size: 1.1em;
+        }
+        th {
+            background-color: #2ecc71;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        /* Section label */
+        .section-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-top: 30px;
+            font-weight: bold;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Letterhead Section with Logo and System Title -->
+    <div class="letterhead">
+        <!-- Logo on the left -->
+        <a href="{% url 'index' %}">
+            <img src="{% static 'img/s1logo.png' %}" alt="Logo" class="logo">
+        </a>
+        <!-- System Title in the center -->
+        <h1 class="system-title">SKIN CARE COMPANION</h1>
+    </div>
+
+    <!-- Prediction Report Table -->
+    <div class="section-title">Prediction Report</div>
+    <table>
+        <tr>
+            <th>Disease Predicted</th>
+            <td><strong>{{ prediction }}</strong></td>
+        </tr>
+        <tr>
+            <th>Medicines</th>
+            <td>{{ medicine }}</td>
+        </tr>
+        <tr>
+            <th>Remedies</th>
+            <td>{{ remedies }}</td>
+        </tr>
+    </table>
+</body>
+</html>

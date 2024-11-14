@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}    
+{% block main %}
+
+    
+
+    <div class="preloader"></div>
+
+    <!-- Header navbar start -->
+    <div class="header-topbar style-2">
+        <div class="container padding-none">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 welcome-top">
+                    <ul class="list-inline top-icon">
+                        
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <ul class="list-inline text-right icon-style-1">
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        <li class=" hvr-rectangle-out"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "navbar.html" %}
+    
+    <!-- Header navbar end -->
+
+
+    <section class="inner-bg over-layer-black" style="background-image: url('{% static "img/bg/profile.jpg" %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mini-title inner-style-2">
+                        <h3 >PROFILE</h3>
+                        <p><a href="{% url 'index' %}">Home</a> <span class="fa fa-angle-right"></span> <a href="#"><b>Profile</b></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% comment %} {% for i in userprofiles  %}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{{i.password}}
+{% endfor %} {% endcomment %}
+    <!-- Team start -->
+    <section class="team-area">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 800px;">
+                        <h2 style="text-align: center; margin-bottom: 20px; color: blue;">Profile</h2>
+                        <div style="width: 50%; margin: 0 auto; background-color: #fff; border: 1px solid #ccc; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="border-bottom: 1px solid #ddd; padding: 10px 0;">
+                                    <span style="font-weight: bold; color: #555;">Full Name:</span>
+                                    <span style="color: #000;">{{ profile.FullName }}</span>
+                                </li>
+                                <li style="border-bottom: 1px solid #ddd; padding: 10px 0;">
+                                    <span style="font-weight: bold; color: #555;">Email:</span>
+                                    <span style="color: #000;">{{ profile.email }}</span>
+                                </li>
+                                <li style="border-bottom: 1px solid #ddd; padding: 10px 0;">
+                                    <span style="font-weight: bold; color: #555;">Date of Birth:</span>
+                                    <span style="color: #000;">{{ profile.DOB }}</span>
+                                </li>
+                                <li style="border-bottom: 1px solid #ddd; padding: 10px 0;">
+                                    <span style="font-weight: bold; color: #555;">Password:</span>
+                                    <span style="color: #000;">{{ profile.password }}</span>
+                                </li>
+                                <li style="padding: 10px 0;">
+                                    <span style="font-weight: bold; color: #555;">Gender:</span>
+                                    <span style="color: #000;">{{ profile.gender }}</span>
+                                </li>
+                                <li style="padding: 10px 0;">
+                                    <span style="font-weight: bold; color: #555;">Created at:</span>
+                                    <span style="color: #000;">{{ profile.created_at }}</span>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        
+                    </div> 
+            </div>
+        </div>
+    </section>
+    <!-- Team end -->
+
+   
+
+    <section class="footer-copy-right bg-f9">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p><a target="_blank" href=" ">HAVE A NICE DAY</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Style End -->
+
+  
+    {% endblock  %}
